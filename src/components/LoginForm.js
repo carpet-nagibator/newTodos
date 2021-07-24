@@ -1,6 +1,5 @@
 import React from "react";
 
-//const users = "https://jsonplaceholder.typicode.com/users";
 const users = "http://localhost:3001/users";
 
 export default class LoginForm extends React.Component {
@@ -14,13 +13,7 @@ export default class LoginForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { handleLoginClick } = this.props;
-    fetch(
-      users +
-        "?username=" +
-        this.state.login +
-        "&website=" +
-        this.state.password
-    )
+    fetch(users + "/" + this.state.login + "/" + this.state.password)
       .then((response) => response.json())
       .then((json) => {
         if (json[0] === undefined) {

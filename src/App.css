@@ -16,3 +16,44 @@
 .cmpld {
   text-decoration: line-through;
 }
+
+.modal__wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.modal__wrapper.open {
+  height: 100%;
+  display: block;
+}
+
+.modal__wrapper.close {
+  height: 0;
+  display: none;
+}
+
+.modal__body {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  margin-top: 5%;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 100%;
+}
+
+.modal__close {
+  text-align: center;
+  margin-top: -15px;
+  font-size: 30px;
+  color: gray;
+  cursor: pointer;
+  width: 40px;
+  margin-left: 460px;
+}
+
+.form {
+  color: black;
+  font-size: 20px;
+}
